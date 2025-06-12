@@ -33,8 +33,15 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  let minVal = Math.min(...numbers);
-  return minVal;
+  // let minVal = Math.min(...numbers);
+  // return minVal;
+  let min = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+  }
+  return min;
 }
 
 
@@ -43,8 +50,15 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  let maxVal = Math.max (...numbers);
-  return maxVal;
+  // let maxVal = Math.max (...numbers);
+  // return maxVal;
+  let max = numbers[0]; 
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
 
 /**
